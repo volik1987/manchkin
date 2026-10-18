@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <title>Манчкин на одного</title>
+  <meta name="description" content="Манчкин на одного: карточная игра против ботов. Классика и Русский манчкин с дополнениями.">
+  <meta name="theme-color" content="#1b120c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Манчкин">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ruslan+Display&family=Pangolin&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="russian">
+  <header class="top">
+    <div class="brand">Манчкин <small>на одного</small></div>
+    <div id="piles" class="piles"></div>
+    <button id="btnLog" class="ib" aria-label="Журнал">📜</button>
+    <button id="btnRules" class="ib" aria-label="Правила">❓</button>
+    <button id="btnNew" class="ib" aria-label="Новая игра">⚙️</button>
+  </header>
+
+  <main class="table">
+    <section id="opps" class="opps"></section>
+    <section class="center">
+      <div id="arena" class="arena"></div>
+      <div id="lastlog" class="lastlog"></div>
+    </section>
+    <section id="me" class="me"></section>
+    <section class="bar">
+      <div id="hint" class="hint"></div>
+      <div id="actions" class="actions"></div>
+    </section>
+    <section class="handwrap">
+      <div id="handlbl" class="handlbl"></div>
+      <div id="hand" class="hand"></div>
+    </section>
+  </main>
+
+  <aside class="logpanel">
+    <div class="loghead">Журнал <button id="logclose" class="ib">✕</button></div>
+    <div id="log" class="log"></div>
+  </aside>
+
+  <div id="toasts" class="toasts"></div>
+  <div id="modals"></div>
+
+  <script src="js/cards.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>
